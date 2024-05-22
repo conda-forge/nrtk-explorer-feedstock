@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: 8210158782b6085d8ef29a61fb6f9259332d31b8dd9645b4b1a4023d512f1bea
+  sha256: f4e120689c1c7bdc285c019b2b01011b80f053f34cc32f18642033d3a86f6747
 
 build:
   entry_points:
