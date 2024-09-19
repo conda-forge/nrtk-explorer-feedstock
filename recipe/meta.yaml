@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -28,6 +28,7 @@ requirements:
     - python >=3.7
   run:
     - accelerate
+    - kwcoco
     - nrtk
     - numpy
     - pillow
