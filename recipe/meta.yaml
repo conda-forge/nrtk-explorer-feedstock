@@ -1,5 +1,5 @@
 {% set name = "nrtk-explorer" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: 53cb8f0dc291dd28b8b9cf0fb8170bdddf5e0d9090aca64ea055cb0d01eaf2e0
+  sha256: 8e9b8ea587a66a2be5587fd579f66c08636b2f643538b3525aefa85952e1b8e0
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
