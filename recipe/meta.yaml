@@ -35,11 +35,11 @@ requirements:
     - python >=3.7
     - pytorch
     - scikit-image
-    - scikit-learn ==1.5.1
+    - scikit-learn >=1.5.2
     - tabulate
     - timm
     - torchvision
-    - trame
+    - trame >=3.7
     - trame-client >=2.15.0
     - trame-quasar
     - trame-server >=2.15.0
