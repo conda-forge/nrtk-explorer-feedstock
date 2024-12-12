@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -29,6 +29,7 @@ requirements:
   run:
     - accelerate
     - kwcoco
+    - pybsm >=0.6
     - nrtk
     - numpy
     - pillow
@@ -43,6 +44,7 @@ requirements:
     - trame-client >=2.15.0
     - trame-quasar
     - trame-server >=2.15.0
+    - trame-annotations
     - transformers
     - umap-learn
 
