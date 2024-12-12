@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
   sha256: bd0908de96deed16e33523a9a2b890a688931a39eaa1042bf976952541d75e04
 
 build:
@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -25,14 +25,14 @@ requirements:
   host:
     - hatchling
     - pip
-    - python >=3.7
+    -  python {{ python_min }}
   run:
     - accelerate
     - kwcoco
     - nrtk
     - numpy
     - pillow
-    - python >=3.7
+    - python >={{ python_min }} 
     - pytorch
     - scikit-image
     - scikit-learn >=1.5.2
@@ -59,6 +59,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   source_files:
     - tests
 
