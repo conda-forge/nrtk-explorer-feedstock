@@ -1,5 +1,5 @@
 {% set name = "nrtk-explorer" %}
-{% set version = "0.3.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: 53cb8f0dc291dd28b8b9cf0fb8170bdddf5e0d9090aca64ea055cb0d01eaf2e0
+  sha256: bd0908de96deed16e33523a9a2b890a688931a39eaa1042bf976952541d75e04
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -35,11 +35,11 @@ requirements:
     - python >=3.7
     - pytorch
     - scikit-image
-    - scikit-learn ==1.5.1
+    - scikit-learn >=1.5.2
     - tabulate
     - timm
     - torchvision
-    - trame
+    - trame >=3.7
     - trame-client >=2.15.0
     - trame-quasar
     - trame-server >=2.15.0
