@@ -47,6 +47,10 @@ requirements:
     - trame-annotations
     - transformers
     - umap-learn
+    - datasets
+    - pillow
+    - torchvision
+    - imageio
 
 test:
   imports:
