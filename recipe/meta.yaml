@@ -36,7 +36,7 @@ requirements:
     - python >={{ python_min }} 
     - pytorch
     - scikit-image
-    - scikit-learn >=1.6
+    - scikit-learn ==1.5.2
     - tabulate
     - timm
     - torchvision
