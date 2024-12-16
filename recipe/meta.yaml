@@ -11,10 +11,10 @@ source:
 
 build:
   entry_points:
-    - nrtk-explorer = nrtk_explorer.app:main
-    - nrtk-explorer-embeddings = nrtk_explorer.app.embeddings:embeddings
-    - nrtk-explorer-tranforms = nrtk_explorer.app.transforms:transforms
-    - nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
+    - nrtk-explorer = nrtk_explorer.app.main:main
+    - nrtk-explorer-embeddings = nrtk_explorer.app.embeddings:main
+    - nrtk-explorer-tranforms = nrtk_explorer.app.transforms:main
+    - nrtk-explorer-filtering = nrtk_explorer.app.filtering:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 2
@@ -29,7 +29,7 @@ requirements:
   run:
     - accelerate
     - kwcoco
-    - pybsm >=0.6,<0.9
+    - pybsm >=0.6,<=0.9
     - nrtk
     - numpy
     - pillow
