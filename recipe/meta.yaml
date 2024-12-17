@@ -1,5 +1,5 @@
 {% set name = "nrtk-explorer" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: bd0908de96deed16e33523a9a2b890a688931a39eaa1042bf976952541d75e04
+  sha256: 9b689454f15607a23bd6b81a887f402cb209a7fd983f58a3811b3115e121f16a
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
     - nrtk-explorer-filtering = nrtk_explorer.app.filtering:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
   host:
     - hatchling
     - pip
-    -  python {{ python_min }}
+    - python {{ python_min }}
   run:
     - accelerate
     - kwcoco
@@ -33,7 +33,7 @@ requirements:
     - nrtk
     - numpy
     - pillow
-    - python >={{ python_min }} 
+    - python >={{ python_min }}
     - pytorch
     - scikit-image
     - scikit-learn ==1.5.2
