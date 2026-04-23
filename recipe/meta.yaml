@@ -29,8 +29,8 @@ requirements:
   run:
     - accelerate
     - kwcoco
-    - pybsm >=0.6,<=0.9
-    - nrtk
+    - pybsm ==0.10.2
+    - nrtk ==0.18.0
     - numpy
     - pillow
     - python >={{ python_min }}
