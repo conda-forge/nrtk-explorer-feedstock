@@ -1,5 +1,5 @@
 {% set name = "nrtk-explorer" %}
-{% set version = "0.7.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: 9d9303a6892418561a1fd85a2c0995608647e07d0bbcb7c2a9bebdc21c6bcabf
+  sha256: 306dd14c104d288a1f730f52a95b099a4cf2f36ff726a11d321c1034cad5ef35
 
 build:
   entry_points:
